@@ -31,3 +31,23 @@
     transform: rotate(360deg);
   }
 }
+
+.to-do-list {
+  font-size: 25px;
+}
+
+.incomplete {
+  font-size: 25px;
+}
+
+.left-side {
+  width: 50%;
+}
+
+.right-side {
+  width: 50%;
+}
+
+.flex {
+  display: flex;
+}
