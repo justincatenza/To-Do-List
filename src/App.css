@@ -34,20 +34,15 @@
 
 .to-do-list {
   font-size: 25px;
-}
-
-.incomplete {
-  font-size: 25px;
+  padding: 10px 0;
 }
 
 .left-side {
-  width: 50%;
-}
-
-.right-side {
-  width: 50%;
-}
-
-.flex {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.to-do {
+  padding-bottom: 5px;
 }
