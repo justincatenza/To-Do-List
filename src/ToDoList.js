@@ -7,6 +7,17 @@ class ToDoList extends React.Component {
     toDoList: [],
   };
 
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos/')
+      .then(response => response.json())
+      .then(toDos => {
+        this.setState(currentState => ({
+          name: currentState.name,
+          toDoList: [...currentState.toDoList, toDos[14].title]
+        }))
+      })
+  }
+  
   updateToDo = (e) => {
     e.preventDefault();
     const toDoBar = document.querySelector('.to-do-bar');
@@ -46,7 +57,7 @@ class ToDoList extends React.Component {
             { this.state.toDoList.map(objective => {
               return (
                 <>
-                  <div className='to-do' onClick={(e) => {this.updateStatus(e)}}>{objective}</div>
+                  <div className='to-do' onClick={(e) => {this.updateStatus(e)}}>{[objective]}</div>
                 </>
               )
             })}
